@@ -70,7 +70,7 @@ while( true );
 	AD=fread(fid,8,'int16'); %this is the actual AD values
 	onS=fread(fid,4); %sample information and events
 	
-	dat.buf(1:numel(AD),:)=(-AD/8000)+4;096; %adjust data, scaling factors and offset has been calculated
+	dat.buf(1:numel(AD),:)=(-AD/8000)+4.096; %adjust data, scaling factors and offset has been calculated
 	dat.buf(numel(AD)+1:numel(AD)+numel(OD))=(OD/4000);
     buffer('put_dat',dat,host,port);
 	disp(dat.buf(9:14)'); %just to show that it is running

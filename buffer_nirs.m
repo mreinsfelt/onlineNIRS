@@ -49,7 +49,7 @@ end
 
 
 %open tmp file
-[filen,path]=uigetfile('~/workspace/data/*.oxy3.tmp','Select .oxy3.tmp file');
+[filen,path]=uigetfile('*.oxy3.tmp','Select .oxy3.tmp file');
 fid=fopen(fullfile(path,filen),'r+');
 
 clc;
